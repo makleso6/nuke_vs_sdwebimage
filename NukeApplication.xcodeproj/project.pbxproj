@@ -8,26 +8,69 @@
 
 /* Begin PBXBuildFile section */
 		8C15C242282E9169006FDC0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15C241282E9169006FDC0B /* AppDelegate.swift */; };
-		8C15C244282E9169006FDC0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15C243282E9169006FDC0B /* SceneDelegate.swift */; };
 		8C15C246282E9169006FDC0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15C245282E9169006FDC0B /* ViewController.swift */; };
-		8C15C249282E9169006FDC0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C15C247282E9169006FDC0B /* Main.storyboard */; };
 		8C15C24B282E9175006FDC0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C15C24A282E9175006FDC0B /* Assets.xcassets */; };
 		8C15C24E282E9175006FDC0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C15C24C282E9175006FDC0B /* LaunchScreen.storyboard */; };
+		8C42B67D283230E900AF6FB5 /* Pulse in Frameworks */ = {isa = PBXBuildFile; productRef = 8C42B67C283230E900AF6FB5 /* Pulse */; };
+		8C42B67F283230E900AF6FB5 /* PulseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 8C42B67E283230E900AF6FB5 /* PulseCore */; };
+		8C42B681283230E900AF6FB5 /* PulseUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8C42B680283230E900AF6FB5 /* PulseUI */; };
+		8C62AB6E282EB0B700D225B8 /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8C62AB6D282EB0B700D225B8 /* image.jpg */; };
+		8C62AB70282EB14400D225B8 /* big.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8C62AB6F282EB14400D225B8 /* big.jpg */; };
+		8C62AB78282EB30100D225B8 /* NukeApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C62AB77282EB30100D225B8 /* NukeApplicationTests.swift */; };
+		8C62AB7E282EB30800D225B8 /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8C62AB6D282EB0B700D225B8 /* image.jpg */; };
+		8C62AB7F282EB30800D225B8 /* big.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8C62AB6F282EB14400D225B8 /* big.jpg */; };
+		8C62AB93282EBA0200D225B8 /* small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8C62AB92282EBA0200D225B8 /* small.jpg */; };
+		8C62AB9C282FDE1100D225B8 /* big.webp in Resources */ = {isa = PBXBuildFile; fileRef = 8C62AB9B282FDDB200D225B8 /* big.webp */; };
+		8C6980A5283050910039941A /* NukeWebP in Frameworks */ = {isa = PBXBuildFile; productRef = 8C6980A4283050910039941A /* NukeWebP */; };
+		8C6980A7283050910039941A /* NukeWebPAdvanced in Frameworks */ = {isa = PBXBuildFile; productRef = 8C6980A6283050910039941A /* NukeWebPAdvanced */; };
+		8C6980A9283050910039941A /* NukeWebPBasic in Frameworks */ = {isa = PBXBuildFile; productRef = 8C6980A8283050910039941A /* NukeWebPBasic */; };
+		8C6980AE2830561F0039941A /* WebPDataDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6980AB2830561F0039941A /* WebPDataDecoder.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8C62AB79282EB30100D225B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C15C236282E9169006FDC0B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C15C23D282E9169006FDC0B;
+			remoteInfo = NukeApplication;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8C15C23E282E9169006FDC0B /* NukeApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NukeApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C15C241282E9169006FDC0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8C15C243282E9169006FDC0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8C15C245282E9169006FDC0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8C15C248282E9169006FDC0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C15C24A282E9175006FDC0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C15C24D282E9175006FDC0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C15C24F282E9175006FDC0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C62AB6D282EB0B700D225B8 /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpg; sourceTree = "<group>"; };
+		8C62AB6F282EB14400D225B8 /* big.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = big.jpg; sourceTree = "<group>"; };
+		8C62AB75282EB30100D225B8 /* NukeApplicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NukeApplicationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C62AB77282EB30100D225B8 /* NukeApplicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NukeApplicationTests.swift; sourceTree = "<group>"; };
+		8C62AB92282EBA0200D225B8 /* small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = small.jpg; sourceTree = "<group>"; };
+		8C62AB9B282FDDB200D225B8 /* big.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = big.webp; sourceTree = "<group>"; };
+		8C6980AA2830561F0039941A /* NukeApplication-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NukeApplication-Bridging-Header.h"; sourceTree = "<group>"; };
+		8C6980AB2830561F0039941A /* WebPDataDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebPDataDecoder.m; sourceTree = "<group>"; };
+		8C6980AC2830561F0039941A /* WebPImageMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebPImageMacros.h; sourceTree = "<group>"; };
+		8C6980AD2830561F0039941A /* WebPDataDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebPDataDecoder.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8C15C23B282E9169006FDC0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C42B681283230E900AF6FB5 /* PulseUI in Frameworks */,
+				8C6980A9283050910039941A /* NukeWebPBasic in Frameworks */,
+				8C6980A5283050910039941A /* NukeWebP in Frameworks */,
+				8C42B67D283230E900AF6FB5 /* Pulse in Frameworks */,
+				8C6980A7283050910039941A /* NukeWebPAdvanced in Frameworks */,
+				8C42B67F283230E900AF6FB5 /* PulseCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C62AB72282EB30100D225B8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,7 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				8C15C240282E9169006FDC0B /* NukeApplication */,
+				8C62AB76282EB30100D225B8 /* NukeApplicationTests */,
 				8C15C23F282E9169006FDC0B /* Products */,
+				8C62AB82282EB3C600D225B8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -49,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				8C15C23E282E9169006FDC0B /* NukeApplication.app */,
+				8C62AB75282EB30100D225B8 /* NukeApplicationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,15 +102,36 @@
 		8C15C240282E9169006FDC0B /* NukeApplication */ = {
 			isa = PBXGroup;
 			children = (
+				8C6980AD2830561F0039941A /* WebPDataDecoder.h */,
+				8C6980AB2830561F0039941A /* WebPDataDecoder.m */,
+				8C6980AC2830561F0039941A /* WebPImageMacros.h */,
+				8C62AB9B282FDDB200D225B8 /* big.webp */,
+				8C62AB92282EBA0200D225B8 /* small.jpg */,
+				8C62AB6D282EB0B700D225B8 /* image.jpg */,
+				8C62AB6F282EB14400D225B8 /* big.jpg */,
 				8C15C241282E9169006FDC0B /* AppDelegate.swift */,
-				8C15C243282E9169006FDC0B /* SceneDelegate.swift */,
 				8C15C245282E9169006FDC0B /* ViewController.swift */,
-				8C15C247282E9169006FDC0B /* Main.storyboard */,
 				8C15C24A282E9175006FDC0B /* Assets.xcassets */,
 				8C15C24C282E9175006FDC0B /* LaunchScreen.storyboard */,
 				8C15C24F282E9175006FDC0B /* Info.plist */,
+				8C6980AA2830561F0039941A /* NukeApplication-Bridging-Header.h */,
 			);
 			path = NukeApplication;
+			sourceTree = "<group>";
+		};
+		8C62AB76282EB30100D225B8 /* NukeApplicationTests */ = {
+			isa = PBXGroup;
+			children = (
+				8C62AB77282EB30100D225B8 /* NukeApplicationTests.swift */,
+			);
+			path = NukeApplicationTests;
+			sourceTree = "<group>";
+		};
+		8C62AB82282EB3C600D225B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +150,37 @@
 			dependencies = (
 			);
 			name = NukeApplication;
+			packageProductDependencies = (
+				8C6980A4283050910039941A /* NukeWebP */,
+				8C6980A6283050910039941A /* NukeWebPAdvanced */,
+				8C6980A8283050910039941A /* NukeWebPBasic */,
+				8C42B67C283230E900AF6FB5 /* Pulse */,
+				8C42B67E283230E900AF6FB5 /* PulseCore */,
+				8C42B680283230E900AF6FB5 /* PulseUI */,
+			);
 			productName = NukeApplication;
 			productReference = 8C15C23E282E9169006FDC0B /* NukeApplication.app */;
 			productType = "com.apple.product-type.application";
+		};
+		8C62AB74282EB30100D225B8 /* NukeApplicationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C62AB7B282EB30100D225B8 /* Build configuration list for PBXNativeTarget "NukeApplicationTests" */;
+			buildPhases = (
+				8C62AB71282EB30100D225B8 /* Sources */,
+				8C62AB72282EB30100D225B8 /* Frameworks */,
+				8C62AB73282EB30100D225B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C62AB7A282EB30100D225B8 /* PBXTargetDependency */,
+			);
+			name = NukeApplicationTests;
+			packageProductDependencies = (
+			);
+			productName = NukeApplicationTests;
+			productReference = 8C62AB75282EB30100D225B8 /* NukeApplicationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -94,11 +189,16 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
+				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					8C15C23D282E9169006FDC0B = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
+					};
+					8C62AB74282EB30100D225B8 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 8C15C23D282E9169006FDC0B;
 					};
 				};
 			};
@@ -111,11 +211,15 @@
 				Base,
 			);
 			mainGroup = 8C15C235282E9169006FDC0B;
+			packageReferences = (
+				8C42B67B283230E900AF6FB5 /* XCRemoteSwiftPackageReference "Pulse" */,
+			);
 			productRefGroup = 8C15C23F282E9169006FDC0B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				8C15C23D282E9169006FDC0B /* NukeApplication */,
+				8C62AB74282EB30100D225B8 /* NukeApplicationTests */,
 			);
 		};
 /* End PBXProject section */
@@ -127,7 +231,19 @@
 			files = (
 				8C15C24E282E9175006FDC0B /* LaunchScreen.storyboard in Resources */,
 				8C15C24B282E9175006FDC0B /* Assets.xcassets in Resources */,
-				8C15C249282E9169006FDC0B /* Main.storyboard in Resources */,
+				8C62AB9C282FDE1100D225B8 /* big.webp in Resources */,
+				8C62AB70282EB14400D225B8 /* big.jpg in Resources */,
+				8C62AB93282EBA0200D225B8 /* small.jpg in Resources */,
+				8C62AB6E282EB0B700D225B8 /* image.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C62AB73282EB30100D225B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C62AB7F282EB30800D225B8 /* big.jpg in Resources */,
+				8C62AB7E282EB30800D225B8 /* image.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +254,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C6980AE2830561F0039941A /* WebPDataDecoder.m in Sources */,
 				8C15C246282E9169006FDC0B /* ViewController.swift in Sources */,
 				8C15C242282E9169006FDC0B /* AppDelegate.swift in Sources */,
-				8C15C244282E9169006FDC0B /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C62AB71282EB30100D225B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C62AB78282EB30100D225B8 /* NukeApplicationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		8C15C247282E9169006FDC0B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8C15C248282E9169006FDC0B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		8C62AB7A282EB30100D225B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C15C23D282E9169006FDC0B /* NukeApplication */;
+			targetProxy = 8C62AB79282EB30100D225B8 /* PBXContainerItemProxy */;
 		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
 		8C15C24C282E9175006FDC0B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -287,15 +411,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NukeApplication/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,6 +429,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.yandex.NukeApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "NukeApplication/NukeApplication-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -314,15 +441,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NukeApplication/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -331,8 +459,43 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.yandex.NukeApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "NukeApplication/NukeApplication-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8C62AB7C282EB30100D225B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.yandex.NukeApplicationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NukeApplication.app/NukeApplication";
+			};
+			name = Debug;
+		};
+		8C62AB7D282EB30100D225B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.yandex.NukeApplicationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NukeApplication.app/NukeApplication";
 			};
 			name = Release;
 		};
@@ -357,7 +520,57 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		8C62AB7B282EB30100D225B8 /* Build configuration list for PBXNativeTarget "NukeApplicationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C62AB7C282EB30100D225B8 /* Debug */,
+				8C62AB7D282EB30100D225B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8C42B67B283230E900AF6FB5 /* XCRemoteSwiftPackageReference "Pulse" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Pulse.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8C42B67C283230E900AF6FB5 /* Pulse */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C42B67B283230E900AF6FB5 /* XCRemoteSwiftPackageReference "Pulse" */;
+			productName = Pulse;
+		};
+		8C42B67E283230E900AF6FB5 /* PulseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C42B67B283230E900AF6FB5 /* XCRemoteSwiftPackageReference "Pulse" */;
+			productName = PulseCore;
+		};
+		8C42B680283230E900AF6FB5 /* PulseUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C42B67B283230E900AF6FB5 /* XCRemoteSwiftPackageReference "Pulse" */;
+			productName = PulseUI;
+		};
+		8C6980A4283050910039941A /* NukeWebP */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NukeWebP;
+		};
+		8C6980A6283050910039941A /* NukeWebPAdvanced */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NukeWebPAdvanced;
+		};
+		8C6980A8283050910039941A /* NukeWebPBasic */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NukeWebPBasic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8C15C236282E9169006FDC0B /* Project object */;
 }
