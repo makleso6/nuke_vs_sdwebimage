@@ -7,48 +7,80 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "AC049229-D98C-49B6-BB4E-E67FCCE00448"
+            uuid = "F1EAD23F-9BEA-496C-B29F-E238DCA24CBF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../NukeWebP/Sources/NukeWebPBasic/BasicWebPDecoder.swift"
+            filePath = "../../Library/Developer/Xcode/DerivedData/NukeApplication-cgqdcsemozvrlwezukbqxhyqotkt/SourcePackages/checkouts/SDWebImage/SDWebImage/Core/SDImageCoderHelper.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "191"
-            endingLineNumber = "191"
-            landmarkName = "decodeCGImage(data:)"
+            startingLineNumber = "340"
+            endingLineNumber = "340"
+            landmarkName = "+decodedImageWithImage:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FFB8D77A-C14C-4F89-8002-1FC0E8676F7B"
+            uuid = "6D4C3087-F4BB-4701-9D28-CC3CF539F2F8"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../NukeWebP/Sources/NukeWebPBasic/BasicWebPDecoder.swift"
+            filePath = "../../Library/Developer/Xcode/DerivedData/NukeApplication-cgqdcsemozvrlwezukbqxhyqotkt/SourcePackages/checkouts/SDWebImage/SDWebImage/Core/SDImageCoderHelper.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
-            landmarkName = "decodeiCGImage(data:)"
+            startingLineNumber = "348"
+            endingLineNumber = "348"
+            landmarkName = "+decodedImageWithImage:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "86415E24-0265-4658-BB4B-D6CE4F0E0D9F"
+            uuid = "52BDBC9A-2696-4366-BDC8-419F053E5534"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "NukeApplication/WebPDataDecoder.m"
+            filePath = "NukeApplication/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "-decodeData:"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "loadlocal()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ACF0C85D-B499-4EDD-BF94-6A5429893167"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Library/Developer/Xcode/DerivedData/NukeApplication-cgqdcsemozvrlwezukbqxhyqotkt/SourcePackages/checkouts/Nuke/Sources/Core/ImagePipeline.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "408"
+            endingLineNumber = "408"
+            landmarkName = "cancel(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EB2BF4A5-84CA-4A47-9419-946E5B62772E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Library/Developer/Xcode/DerivedData/NukeApplication-cgqdcsemozvrlwezukbqxhyqotkt/SourcePackages/checkouts/Nuke/Sources/Core/ImagePipeline.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "341"
+            endingLineNumber = "341"
+            landmarkName = "startDataTask(_:callbackQueue:progress:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

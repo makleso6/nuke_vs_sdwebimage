@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C12CC332832854400D34630 /* img.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8C12CC322832854400D34630 /* img.jpg */; };
 		8C15C242282E9169006FDC0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15C241282E9169006FDC0B /* AppDelegate.swift */; };
 		8C15C246282E9169006FDC0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15C245282E9169006FDC0B /* ViewController.swift */; };
 		8C15C24B282E9175006FDC0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C15C24A282E9175006FDC0B /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 		8C6980A7283050910039941A /* NukeWebPAdvanced in Frameworks */ = {isa = PBXBuildFile; productRef = 8C6980A6283050910039941A /* NukeWebPAdvanced */; };
 		8C6980A9283050910039941A /* NukeWebPBasic in Frameworks */ = {isa = PBXBuildFile; productRef = 8C6980A8283050910039941A /* NukeWebPBasic */; };
 		8C6980AE2830561F0039941A /* WebPDataDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6980AB2830561F0039941A /* WebPDataDecoder.m */; };
+		8CADF7902832654C00CA9F12 /* SDWebImageWebPCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 8CADF78F2832654C00CA9F12 /* SDWebImageWebPCoder */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C12CC322832854400D34630 /* img.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img.jpg; sourceTree = "<group>"; };
 		8C15C23E282E9169006FDC0B /* NukeApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NukeApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C15C241282E9169006FDC0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C15C245282E9169006FDC0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CADF7902832654C00CA9F12 /* SDWebImageWebPCoder in Frameworks */,
 				8C42B681283230E900AF6FB5 /* PulseUI in Frameworks */,
 				8C6980A9283050910039941A /* NukeWebPBasic in Frameworks */,
 				8C6980A5283050910039941A /* NukeWebP in Frameworks */,
@@ -102,6 +106,7 @@
 		8C15C240282E9169006FDC0B /* NukeApplication */ = {
 			isa = PBXGroup;
 			children = (
+				8C12CC322832854400D34630 /* img.jpg */,
 				8C6980AD2830561F0039941A /* WebPDataDecoder.h */,
 				8C6980AB2830561F0039941A /* WebPDataDecoder.m */,
 				8C6980AC2830561F0039941A /* WebPImageMacros.h */,
@@ -157,6 +162,7 @@
 				8C42B67C283230E900AF6FB5 /* Pulse */,
 				8C42B67E283230E900AF6FB5 /* PulseCore */,
 				8C42B680283230E900AF6FB5 /* PulseUI */,
+				8CADF78F2832654C00CA9F12 /* SDWebImageWebPCoder */,
 			);
 			productName = NukeApplication;
 			productReference = 8C15C23E282E9169006FDC0B /* NukeApplication.app */;
@@ -213,6 +219,7 @@
 			mainGroup = 8C15C235282E9169006FDC0B;
 			packageReferences = (
 				8C42B67B283230E900AF6FB5 /* XCRemoteSwiftPackageReference "Pulse" */,
+				8CADF78E2832654C00CA9F12 /* XCRemoteSwiftPackageReference "SDWebImageWebPCoder" */,
 			);
 			productRefGroup = 8C15C23F282E9169006FDC0B /* Products */;
 			projectDirPath = "";
@@ -231,6 +238,7 @@
 			files = (
 				8C15C24E282E9175006FDC0B /* LaunchScreen.storyboard in Resources */,
 				8C15C24B282E9175006FDC0B /* Assets.xcassets in Resources */,
+				8C12CC332832854400D34630 /* img.jpg in Resources */,
 				8C62AB9C282FDE1100D225B8 /* big.webp in Resources */,
 				8C62AB70282EB14400D225B8 /* big.jpg in Resources */,
 				8C62AB93282EBA0200D225B8 /* small.jpg in Resources */,
@@ -414,8 +422,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UD26R347UN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NukeApplication/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Network usage required for debugging purposes";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -444,8 +454,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UD26R347UN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NukeApplication/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Network usage required for debugging purposes";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -540,6 +552,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		8CADF78E2832654C00CA9F12 /* XCRemoteSwiftPackageReference "SDWebImageWebPCoder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageWebPCoder.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.8.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -569,6 +589,11 @@
 		8C6980A8283050910039941A /* NukeWebPBasic */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = NukeWebPBasic;
+		};
+		8CADF78F2832654C00CA9F12 /* SDWebImageWebPCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8CADF78E2832654C00CA9F12 /* XCRemoteSwiftPackageReference "SDWebImageWebPCoder" */;
+			productName = SDWebImageWebPCoder;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

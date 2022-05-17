@@ -12,11 +12,25 @@ import NukeWebPAdvanced
 import NukeWebP
 import Pulse
 import PulseCore
+import Logging
+import SDWebImage
+import SDWebImageWebPCoder
+
+class CustomImageView: UIImageView {
+    override var image: UIImage? {
+        get {
+            super.image
+        }
+        set {
+            super.image = newValue
+        }
+    }
+}
 
 class ViewController: UIViewController {
     
-    lazy var imageView: UIImageView = {
-        let imageView = UIImageView(frame: .zero)
+    lazy var imageView: CustomImageView = {
+        let imageView = CustomImageView(frame: .zero)
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -27,7 +41,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let WebPCoder = SDImageWebPCoder.shared
+        SDImageCodersManager.shared.addCoder(WebPCoder)
+        SDWebImageDownloader.shared.setValue("image/webp,image/*,*/*;q=0.8", forHTTPHeaderField:"Accept")
 
+//        Networklo
+//        LoggingSystem.bootstrap(PersistentLogHandler.init)
+//        LoggingSystem.bootstrap(NetworkLogger.init)
+
+//        URLSessionProxyDelegate.enableAutomaticRegistration()
         view.addSubview(imageView)
 //        imageView.backgroundColor = .red
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -36,37 +58,93 @@ class ViewController: UIViewController {
         imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         
-        WebPImageDecoder.enable(closure: {
-            var options = WebPDecoderOptions()
-            options.useThreads = false
-//            return AdvancesWebPDecoder(options: options)
-//            return BasicWebPDecoder()
-            return ObjcWebPDecoder()
-        })
+//        WebPImageDecoder.enable(closure: {
+//            var options = WebPDecoderOptions()
+//            options.useThreads = false
+////            return AdvancesWebPDecoder(options: options)
+////            return BasicWebPDecoder()
+////            return ObjcWebPDecoder()
+//            return SDWebPDecoder()
+//        })
+        
+        
         
         let pipeline = ImagePipeline {
             $0.isProgressiveDecodingEnabled = true
+            let sizeLimit = 1024 * 1024 * 500
+            ($0.dataCache as? DataCache)?.sizeLimit = sizeLimit//1024 * 1024 * 500
+//            let configuration = URLSessionConfiguration.default
+            let conf = URLSessionConfiguration.default
+            conf.urlCache = DefaultURLCacheFactory().makeURLCache(named: "images")
+
+            $0.dataLoader = DataLoader(configuration: conf, validate: DataLoader.validate)
+            $0.isDecompressionEnabled = true
         }
         
-        ImagePipeline.shared = pipeline
+        ImagePipeline.shared = pipeline//.init(configuration: .withURLCache)
 //        (ImagePipeline.shared.configuration.dataLoader as? DataLoader)?.session.configuration.urlCache?.removeAllCachedResponses()
 
 //        let url = "https://yastatic.net/s3/edadeal-public-static/makleso/big.webp"
-        let url = "https://leonardo.edadeal.io/dyn/re/icons/tabbar/v1/catalog-off-EDADEALAPPS-143.png?res=l"
+        let url = "https://yastatic.net/s3/edadeal-public-static/makleso/62154194fa074af3a049b8e3474c00d5%20%281%29.jpg"
+//        let url = "https://leonardo.edadeal.io/dyn/re/icons/tabbar/v1/catalog-off-EDADEALAPPS-143.png?res=l"
         let holder = Holder(value: AnyIterator([url].makeIterator()))
 //        let holder = Holder(value: AnyIterator([images[10]].makeIterator()))
 //        let holder = Holder(value: AnyIterator([images[10]].makeIterator()))
 //        let holder = Holder(value: AnyIterator(images.makeIterator()))
         if let next = holder.value.next() {
+//            loadlocal()
+//            loadsd(url: next, holder: holder)
             load(url: next, holder: holder)
         }
     }
     
+    func loadlocal() {
+        if let url = Bundle.main.url(forResource: "img", withExtension: "jpg") {
+            do {
+                let data = try Data(contentsOf: url)
+                let image = UIImage(data: data)
+                let decoded = SDImageCoderHelper.decodedImage(with: image)
+//                self.imageView.image = decoded
+
+            } catch {
+                
+            }
+        }
+    }
+    func loadsd(url: String, holder: Holder<AnyIterator<String>>) {
+//        return;
+        imageView.sd_setImage(with: URL(string: url), completed: { [weak self] img, error, cacheType, url in
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5), execute: {
+                self?.imageView.image = nil
+            })
+        })
+    }
     func load(url: String, holder: Holder<AnyIterator<String>>) {
         var urlRequest = URLRequest(url: URL(string: url)!)
         urlRequest.setValue("image/webp,image/*,*/*;q=0.8", forHTTPHeaderField: "Accept")
-        
+//        URLSession.shared.dataTask(with: urlRequest, completionHandler: { data, resp, error in
+//            if let d = data {
+//                autoreleasepool(invoking: {
+////                    let image = try? BasicWebPDecoder().decode(data: d)
+//                    let image = UIImage(data: d)
+//                })
+//
+//            }
+//        }).resume()
         let request = ImageRequest(urlRequest: urlRequest)
+        
+        ImagePipeline.shared.loadData(with: request, completion: { [weak self] result in
+            switch result {
+            case .success(let data, let response):
+                print("error")
+                let image = UIImage(data: data)
+                let decoded = SDImageCoderHelper.decodedImage(with: image)
+                self?.imageView.image = decoded
+            case .failure(let error):
+                print(error)
+            }
+        })
+        return;
         Nuke.loadImage(
             with: request,
             options: ImageLoadingOptions.shared,
@@ -78,18 +156,23 @@ class ViewController: UIViewController {
             }, completion: { [weak self] result in
                 switch result {
                 case .success(let imageResponse):
-                    DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(250), execute: {
+//                    SDImageCoderHelper.decodedImage(with: <#T##UIImage?#>)
+                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5), execute: {
+                        self?.imageView.image = nil
                         if let next = holder.value.next() {
                             self?.load(url: next, holder: holder)
                         }
+                        ImagePipeline.shared.configuration.imageCache?.removeAll()
+                        ImagePipeline.shared.configuration.dataCache?.removeAll()
+                        ImagePipeline.shared.cache.removeAll()
                     })
 //                    print(imageResponse.urlResponse ?? "")
-                    
-                    
+
+
                 case .failure(let error):
                     print(error)
                 }
-                
+
 //                print("result", result)
             }
         )
@@ -233,6 +316,20 @@ var images: [String] = [
     "https://leonardo.edadeal.io/dyn/re/retailers/images/logos/sq/ret_981.png?res=l"
 ]
 
+public final class SDWebPDecoder: WebPDecoding {
+    public func decode(data: Data) throws -> NukeWebP.ImageType {
+        if let image = SDImageWebPCoder().decodedImage(with: data, options: nil) {
+            return image
+        } else {
+            throw WebPDecodingError.unknownError
+        }
+    }
+    
+    public func decodei(data: Data) throws -> NukeWebP.ImageType {
+        throw WebPDecodingError.unknownError
+    }
+}
+
 public final class ObjcWebPDecoder: WebPDecoding {
     lazy var decoder: WebPDataDecoder = {
 
@@ -256,4 +353,32 @@ public final class ObjcWebPDecoder: WebPDecoding {
             throw WebPDecodingError.unknownError
         }
     }
+}
+
+internal final class DefaultURLCacheFactory {
+    
+    private enum Const {
+        internal static var diskCapacity: Int { return 500 * 1024 * 1024 }
+        internal static var memoryCapacity: Int { return 0 }
+    }
+    
+    /// Возвращает `URLCache` с дисковым пространством 300 Мб, пространством в памяти 0 б, по пути `ru.edadeal.cache`.
+    internal func makeURLCache(named: String) -> URLCache {
+        if #available(iOS 13, *) {
+            let url = NSSearchPathForDirectoriesInDomains(.cachesDirectory,
+                                                          .userDomainMask,
+                                                          true)
+                .first
+                .map({ URL(fileURLWithPath: $0) })
+                .map({ $0.appendingPathComponent(named) })
+            return URLCache(memoryCapacity: Const.memoryCapacity,
+                            diskCapacity: Const.diskCapacity,
+                            directory: url)
+        } else {
+            return URLCache(memoryCapacity: Const.memoryCapacity,
+                            diskCapacity: Const.diskCapacity,
+                            diskPath: named)
+        }
+    }
+    
 }
